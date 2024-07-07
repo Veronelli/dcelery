@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  django:
+    container_name: django-celery
+    build:
+      context: ./
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 8001:8000
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=567f8d9fsf8g7d6g5fsdf
+      - ALLOWED_HOSTS=localhost,127.0.0.1
