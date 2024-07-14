@@ -137,3 +137,8 @@ CELERY_RESULT_BACKEND = os.environ.get(
     'CELERY_RESULT_BACKEND',
     default='redis://redis:6379/0'
 )
+
+# Celery imports
+CELERY_IMPORTS = [
+    'cworker.tasks',
+]
